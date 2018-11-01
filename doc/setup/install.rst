@@ -127,6 +127,7 @@ headers and footers so it can not be installed automatically.
 The recommended version is 0.12.1 and is available on `the wkhtmltopdf download page`_,
 in the archive section.
 
+
 Repository
 ^^^^^^^^^^
 
@@ -141,6 +142,16 @@ following commands as root:
     # apt-get update && apt-get install odoo
 
 You can then use the usual ``apt-get upgrade`` command to keep your installation up-to-date.
+
+Out of the box installations of Ubuntu Server might not have the Python dependencies needed to install. 
+If a message prompts "The following packages have unmet dependencies" -with a list of Python dependencies- then add universe to the cathegories of /etc/apt/sources.list 
+
+.. code-block:: console
+
+    # sudo vi /etc/apt/sources.list
+    # deb http://archive.ubuntu.com/ubuntu bionic main **universe**
+    # deb http://archive.ubuntu.com/ubuntu bionic-security main **universe** 
+    # deb http://archive.ubuntu.com/ubuntu bionic-updates main **universe**
 
 At this moment, there is no repository for the Enterprise Edition.
 
